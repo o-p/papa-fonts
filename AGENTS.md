@@ -13,7 +13,7 @@ Goal: build the fonts the user wants, install them, and point their apps at them
    - VS Code: `editor.fontFamily`, `terminal.integrated.fontFamily`. Put the Papa family first.
    - iTerm2: Profiles > Text > Non-ASCII Font.
    - Other terminals and editors: set the Papa family as the primary font or the CJK fallback font.
-7. Have the user open `sample.txt` to check: all 8 marks `、。，．：；！？` should sit on the left of their cell.
+7. Ask the user to check the result in an app that uses the font: all 8 marks `、。，．：；！？` should sit on the left of their cell, as in the README previews.
 
 ## Rules
 
