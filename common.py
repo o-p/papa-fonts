@@ -138,5 +138,7 @@ def bbox(font: TTFont, ch: str = "，") -> str:
 def save(font: TTFont, out: Path, pairs: list[tuple[str, str]], before: str, ext: str) -> None:
     ps = rename(font, pairs)
     path = out / f"{ps}{ext}"
+    # Recalculating bboxes re-encodes every glyph, and fontTools' encoding of upstream overlap flags fails OTS
+    font.recalcBBoxes = False
     font.save(path)
     print(f"{path.name}  ，: {before} -> {bbox(font)}")
